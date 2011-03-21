@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='c:/Program Files/Vim'
+let g:netrw_dirhist_2='c:/programming/files/rails_sandbox/sample_app'
+let g:netrw_dirhist_3='c:/programming/files/rails_sandbox/sample_app/app'
+let g:netrw_dirhist_4='c:/programming/files/rails_sandbox/sample_app/app/models'

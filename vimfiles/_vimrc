@@ -1,0 +1,129 @@
+filetype on " Automatically detect fyle types.
+set nocompatible " We don't want vi compatibility
+" Add recently accessed projects menu (project plugin)
+set viminfo^=!
+
+" Minibuffer Explorer Settings
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
+
+" alt+n or alt+p to navigate between entries in QuickFix
+map <silent> <m-p> :cp <cr>
+map <silent> <m-n> :cn <cr>
+
+" Change which file opens after executing :Rails command
+let g:rails_default_file='config/database.yml'
+
+syntax enable
+
+set cf  " Enable error files & error jumping.
+set clipboard+=unnamed  " Yanks go on clipboard instead.
+set history=256  " Number of things to remember in history.
+set autowrite  " Writes on make/shell commands
+set ruler  " Ruler on
+set nu  " Line numbers on
+set nowrap  " Line wrapping off
+set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
+" colorscheme vividchalk  " Uncomment this to set a default theme
+ 
+" Formatting (some of these are for coding in C and C++)
+set ts=2  " Tabs are 2 spaces
+set bs=2  " Backspace over everything in insert mode
+set shiftwidth=2  " Tabs under smart indent
+set nocp incsearch
+set cinoptions=:0,p0,t0
+set cinwords=if,else,while,do,for,switch,case
+set formatoptions=tcqr
+set cindent
+set autoindent
+set smarttab
+set expandtab
+ 
+" Visual
+set showmatch  " Show matching brackets.
+set mat=5  " Bracket blinking.
+set list
+
+
+set novisualbell  " No blinking .
+set noerrorbells  " No noise.
+set laststatus=2  " Always show status line.
+ 
+" gvim specific
+set mousehide  " Hide mouse after chars typed
+set mouse=a  " Mouse in all modes
+
+version 6.0
+if &cp | set nocp | endif
+let s:cpo_save=&cpo
+set cpo&vim
+cnoremap <C-F4> c
+inoremap <C-F4> c
+cnoremap <C-Tab> w
+inoremap <C-Tab> w
+cmap <S-Insert> +
+imap <S-Insert> 
+xnoremap  ggVG
+snoremap  gggHG
+onoremap  gggHG
+nnoremap  gggHG
+vnoremap  "+y
+noremap  
+vnoremap  :update
+nnoremap  :update
+onoremap  :update
+nmap  "+gP
+omap  "+gP
+vnoremap  "+x
+noremap  
+noremap  u
+cnoremap   :simalt ~
+inoremap   :simalt ~
+map Q gq
+nmap gx <Plug>NetrwBrowseX
+nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>"),0)
+onoremap <C-F4> c
+nnoremap <C-F4> c
+vnoremap <C-F4> c
+onoremap <C-Tab> w
+nnoremap <C-Tab> w
+vnoremap <C-Tab> w
+vmap <S-Insert> 
+vnoremap <BS> d
+vmap <C-Del> "*d
+vnoremap <S-Del> "+x
+vnoremap <C-Insert> "+y
+nmap <S-Insert> "+gP
+omap <S-Insert> "+gP
+cnoremap  gggHG
+inoremap  gggHG
+inoremap  :update
+inoremap  u
+cmap  +
+inoremap  
+inoremap  u
+noremap   :simalt ~
+let &cpo=s:cpo_save
+unlet s:cpo_save
+set background=dark
+set backspace=indent,eol,start
+set backup
+set diffexpr=MyDiff()
+set guifont=Monaco:h10:b:cANSI
+set helplang=ru
+set history=50
+set hlsearch
+set incsearch
+set keymodel=startsel,stopsel
+set ruler
+set selection=exclusive
+set selectmode=mouse,key
+set softtabstop=2
+set whichwrap=b,s,<,>,[,]
+set window=32
+" vim: set ft=vim :
+colors vividchalk
+set number
+
